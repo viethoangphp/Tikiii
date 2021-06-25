@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Tikiii.Models.Book
+<h3>Đã Mua Thành Công Cuốn @Model.Title</h3>
+<div class="row" style="padding:15px 0">
+        <div class="col-md-3">
+            <div class="card text-center" style="width: 18rem;">
+                <img class="card-img-top" style="width:100%;height:auto" src="@Model.Avatar" alt="@Model.Title">
+                <div class="card-body">
+                    <h5 class="card-title text-capitalize">@Model.Title</h5>
+                    <p class="card-text">@Model.Description</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <a href="/Home">Mua Tiếp Sách Khác</a>
+        </div>
+</div>
+

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model IEnumerable<Tikiii.Models.Book>
+<div class="row" style="padding:15px 0">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3">
+            <div class="card text-center" style="width: 18rem;">
+                <img class="card-img-top" style="width:100%;height:auto" src="@item.Avatar" alt="@item.Title">
+                <div class="card-body">
+                    <h5 class="card-title text-capitalize">@item.Title</h5>
+                    <p class="card-text">@item.Description</p>
+                    <a href="/Buy/Index/@item.id" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
